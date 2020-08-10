@@ -1,0 +1,58 @@
+\section{Introduction} \label{sec:intro}
+
+LSST DM conducted the first operations rehearsal from July 28$^{th}$ to 30$^{th}$ 2020.
+The plan for the rehearsal was outlined in \citeds{LDM-643}, the main principle was to simulate
+nominal operations with ComCam calibration data flowing from Chile, being processed (calibrated) 
+and having some quality assurance done on it.
+\citeds{LDM-643} details the procedure and personnel involved,
+hence in this document we give a brief summary of what  happened in the rehearsal taking that as read.
+
+
+\section{The rehearsal \#2}
+
+There was a short prep meeting on the Monday (July 27$^{th}$ 2020) as the rehearsal started to make sure everything was in place.
+\subsection{Setup and limitations} \label{sec:setup}
+
+ComCam had been installed at the Base (La Serena) computer room and basic operation using the OCS/Archiver
+mode had been set forth.  The hardware installation was a filter-less ComCam (with {\it r}-band hardcoded
+in headers with basic functionality to obtain bias, flat, and dark frames.
+
+Data transfer from the Base to the current USDF at NCSA were accomplished but the long-haul networks were not
+fully operational.  The raft-scale data were ingested (gen2 Butler repos) on arrival at the USDF 
+and made available through the {\it \/project\/shared/comCam} space (also visible for the LSP).  
+
+Processing was accomplished using the nascent utilities processBias.py, processFlat.py, processDark.py and ingestCalib.py.
+
+The calibrations frames taken were bias, dark, flat sequences of roughly 10 exposures each on each night.  There exist extraneous
+exposures within the sets but the main calibration sequences were {\it groupId}'s (e.g. CALSET\_20200728\_1920).  Due to an 
+upcoming lockdown in Chile (due to Covid-19) the calibration sequences were obtained the evening prior to each "night" of the 
+rehearsal.  Processing occurred either in the evening or morning after (depending on the transfer time) and analysis and QA occurred
+shortly thereafter.
+
+\subsubsection{Communications }
+
+
+A Slack channel \href{https://lsstc.slack.com/messages/CJBSY6FUN}{\#ops-rehearal-2} was created for minor communications.
+
+Daily telecon was held using bluejeans at 10:00PST with the agenda:
+\begin{itemize}
+\item Observing: Recap of previous night's calibrations.
+\item Data transfer summry:  How did data transfer and ingest go.
+\item Pipeline Processing Summary: 	How did processing go.  Were there errors, incidents, caveats and reference to logs.
+\item Metrics/QA:  What can we say about the data. Summary plots and metrics.  What is missing in our view. What can we add for next night?
+\item Status:   Current instrument status.  Discuss current plans, changes, action items.
+
+\end{itemize}
+
+
+\input{day1}
+\input{day2}
+\input{day3}
+
+
+\section{Conclusion and lessons learned}\label{sec:conc}
+
+
+
+
+

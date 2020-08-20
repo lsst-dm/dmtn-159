@@ -4,7 +4,7 @@ LSST DM conducted the second operations rehearsal (milestones LDM-503-11 see \ci
 The plan for the rehearsal was outlined in \citeds{LDM-643}, the main principle was to simulate
 nominal operations with ComCam calibration data flowing from Chile, being processed (calibrated)
 and having some quality assurance performed.  The overall emphasis was to investigate/simulate how
-raft-scale data be acquired and processed in preparation for ComCam commissioning activities.
+raft-scale data can be acquired and processed in preparation for ComCam commissioning activities.
 \citeds{LDM-643} details the procedure and personnel involved,
 hence in this document we give a brief summary of what  happened in the rehearsal taking that as read.
 
@@ -12,7 +12,7 @@ hence in this document we give a brief summary of what  happened in the rehearsa
 \section{The rehearsal \#2}
 
 There was a short preliminary meeting on the Monday (July 27$^{th}$ 2020), immediately prior to the
-rehearsal start to, ensure hardware, software, and personnel were ready.
+rehearsal start to ensure hardware, software, and personnel were ready.
 
 \subsection{System Configuration During the Rehearsal} \label{sec:setup}
 
@@ -29,7 +29,7 @@ and ingestCalib.py.
 
 The calibrations frames taken were bias, dark, flat sequences of roughly 10 exposures each on each night.
 There exist extraneous exposures within the sets but the main calibration sequences used {\it groupId}'s
-(e.g., CALSET\_20200728\_1920) to facilitate their identification.  Due to an upcoming lock down in Chile
+(e.g., CALSET\_20200728\_1920) to facilitate their identification.  Due to an upcoming quarantine in Chile
 (due to COVID-19) the calibration sequences were obtained the evening prior to each "night" of the
 rehearsal so that the rehearsal could be completed before the lock down began but also to hedge against
 slow transfers (because the long-haul networks were not fully functional).  Processing occurred either
@@ -39,9 +39,9 @@ shortly thereafter.
 \subsubsection{Communications }
 
 
-A Slack channel \href{https://lsstc.slack.com/messages/CJBSY6FUN}{\#ops-rehearal-2} was created for minor communications.
+A Slack channel \href{https://lsstc.slack.com/messages/CJBSY6FUN}{\#ops-rehearal-2} was created to support communications.
 
-Daily telecon was held using bluejeans at 10:00PST with the agenda:
+A daily telecon was held using bluejeans at 10:00PST with the agenda:
 \begin{itemize}
 \item Observing: Recap of previous night's calibrations.
 \item Data transfer summary:  How did data transfer and ingest go.
@@ -60,19 +60,20 @@ Daily telecon was held using bluejeans at 10:00PST with the agenda:
 \section{Conclusion and lessons learned}\label{sec:conc}
 This rehearsal was slightly delayed to allow us to use ComCam. Even though it was in the base facility and not on the mountain it was still worth waiting for.
 It is a less than ideal situation born out by the first images with moisture on the lens due to the N2 running out.
-The team in this rehearsal, using actual hardware, had a more active role for the observing specialist on the mountain (in his case setting up the flat for the camera and initiating the observing sequence).
+The team in this rehearsal, using actual hardware, had a more active role for the $``$observing specialist on the mountain$''$ (in this case setting up the flat for the camera and initiating the observing sequence).
 We used software from Telescope and Site, Camera and DM to take the images and transfer them to NCSA.
-All of course underpinned by machines and networks  supported by Rubin IT.
+All of this activty underpinned by machines and networks supported by Rubin IT.
 This is a first true demonstration of multiple parts of the system working together in an operational manner.
 All of the hard integration efforts of SITCOM have born fruit for us here.
 
-We ran into networking problems and we were not easily able to diagnose them - we should have included key long haul network people in the rehearsal and we shall next time.
+Among the lessons learned from this rehearsal are:
+\item We ran into networking problems and we were not easily able to diagnose them - we should have included key long haul network people in the rehearsal and we shall next time.
 
-We encountered problems with Data Management pipeline configuration. Documentation and training need to be provided.
+\item We encountered problems with Data Management pipeline configuration. Documentation and training need to be provided.
 
-We still need to have automated processing in place for images - in the plan but not yet available.
+\item We still need to have automated processing in place for images - in the plan but not yet available.
 
-This was a very good rehearsal the teams worked well together, there remains plenty to do in future rehearsals!
+In summary, this was a very good rehearsal the teams worked well together, there remains plenty to do in future rehearsals!
 
 
 

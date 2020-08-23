@@ -3,7 +3,7 @@
 The daily meeting took place as planned at 11:00 PST. \footnote{\url{https://confluence.lsstcorp.org/display/DM/OPS+Rehearsal+\%28Day+2\%3A+2020-07-29\%29+Meeting+notes}}
 
 Initial data tests took O(2 hours).  Second test provided calibrations for the
-second night (flats should not show condensation).
+second night (flats should not show condensation \figref{fig:d1}).
 
 Transfers were again slow and DB access was not provided in monitoring scripts, so
 timing relied on file creation times (fixes were added after the meeting).  LHN
@@ -14,14 +14,14 @@ CALIB area permissions worked, but is still unclear how to see the logs.  One da
 had problems with only 6 of 9 files being transferred (required a restart).
 
 Quality analyses showed a huge change in flat frames (confirming that
-moisture indeed impacted previous calibrations).
+moisture indeed impacted previous calibrations \figref{fig:d1}).
 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.6\textwidth]{figures/n2bad}
+\includegraphics[width=0.9\textwidth]{figures/n2bad}
 \end{center}
-\caption{Night two flat still with incorrect bias subtraction.\label{fig:d2}}
+\caption{Left: Night 2 dark with incorrect bias subtracted.  Right: Night 2 dark with correct bias subtracted.\label{fig:d2}}
 \end{figure}
 
 \subsubsection{Discussion}
@@ -32,5 +32,6 @@ the "real" sequence being taken.  This plan was altered in favor of attempting t
 get some preliminary estimates about the overall stability of the instrument from
 one night to the next while in its temporary (not so stable) environment.  So the
 upcoming calibration sequences were planned to have no explicit changes.
+The associated QA analysis revealed an instability in (at least) the bias frames \figref{fig:d3}
 
 
